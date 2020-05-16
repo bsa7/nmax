@@ -24,10 +24,14 @@ Gem::Specification.new do |s|
     'README.md',
     'Rakefile',
     'nmax.gemspec',
-    'lib/nmax.rb',
-    'test/n_max_stdin_reader_spec.rb'
+    'bin/nmax.rb',
+    'lib/nmax_core.rb',
+    'lib/nmax_reader.rb',
+    'spec/nmax_reader_spec.rb',
+    'spec/spec_helper.rb'
   ]
   s.test_files = [
-    'test/n_max_stdin_reader_spec.rb'
+    'spec/nmax_reader_spec.rb',
+    'spec/spec_helper.rb'
   ]
 end
