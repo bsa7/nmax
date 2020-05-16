@@ -6,16 +6,18 @@ class NmaxReader
   end
 
   def capture_data
-    eof_not_reached = true
     block_length = 121
     data_size = 0
     maximum_numbers_founded = []
     digit_buffer = ''
 
-    while eof_not_reached
+    loop do
       block = $stdin.read(block_length)
+      break if block.empty?
+
       data_size += block.length
       print "\rReading: #{data_size}."
+      puts "block: #{block}"
       block.each_char do |char|
         if char =~ /\d/
           digit_buffer << char
@@ -24,9 +26,12 @@ class NmaxReader
           digit_buffer = ''
         end
       end
+
+      maximum_numbers_founded.push digit_buffer.to_i if digit_buffer.length.positive?
       break if block.length < block_length
     end
 
+    puts "maximum_numbers_founded: #{maximum_numbers_founded.join(', ')}"
     maximum_numbers_founded.length
   end
 end

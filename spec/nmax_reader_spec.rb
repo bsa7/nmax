@@ -11,16 +11,19 @@ RSpec.describe NmaxReader do
   end
 
   describe 'capture data' do
-    before do
-      $stdin = StringIO.new('Text only string')
-    end
-
     after do
       $stdin = STDIN
     end
 
     it 'must read text without digits from stdin and returns zero.' do
+      $stdin = StringIO.new('Text only string')
       expect(reader_instance.capture_data).to be_zero
+      $stdin = STDIN
+    end
+
+    it 'must read text with digits from stdin and returns count of founded numbers.' do
+      $stdin = StringIO.new('Text with 777 digits 999')
+      expect(reader_instance.capture_data).to be == 2
     end
   end
 end
