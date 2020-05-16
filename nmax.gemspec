@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_development_dependency 'rake', '12.3.3'
-  s.add_development_dependency 'rspec', '3.9.1'
-  s.add_development_dependency 'simplecov', '0.8.15'
+  s.add_development_dependency 'rspec', '3.5.0'
+  s.add_development_dependency 'simplecov'
 
   s.files = [
     'LICENSE',
