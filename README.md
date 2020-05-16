@@ -9,7 +9,7 @@ usage
 
 Script runs from console with command:
 ```bash
-cat <filename> | ruby nmax.rb <limit_count>
+cat <filename> | nmax <limit_count>
 ```
 
 Where
@@ -26,7 +26,7 @@ rake test
 install
 -------
 
-* gem install nmax
+* gem install nmax-aoirgf
 
 *Note:* You may need to use sudo to install gems, but it is preferable to do without it.
 

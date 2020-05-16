@@ -1,6 +1,7 @@
 Gem::Specification.new do |s|
-  s.name = 'nmax'
-  s.version = '0.1.1'
+  s.name = 'nmax-aoirgf'
+  s.version = '0.1.2'
+  s.executables = ['nmax']
 
   s.authors = ['Sergio Belevskij']
   s.email = 'bbelevskij@gmail.com'
@@ -24,7 +25,7 @@ Gem::Specification.new do |s|
     'README.md',
     'Rakefile',
     'nmax.gemspec',
-    'bin/nmax.rb',
+    'bin/nmax',
     'lib/nmax_core.rb',
     'lib/nmax_reader.rb',
     'spec/nmax_reader_spec.rb',
