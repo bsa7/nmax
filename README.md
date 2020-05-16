@@ -1,4 +1,4 @@
-nmax
+nmax [![Build Status](https://travis-ci.org/r72cccp/nmax.svg?branch=master)](https://travis-ci.org/r72cccp/nmax)
 ====
 
 Ruby gem, reads text data from the input stream, upon completion of the input, displays the n largest integers,
