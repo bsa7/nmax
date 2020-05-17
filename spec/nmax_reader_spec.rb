@@ -30,5 +30,16 @@ RSpec.describe NmaxReader do
       $stdin = StringIO.new('Text with numbers: 555, 100500, 222, 333, 1001, 777')
       expect(reader_instance.capture_data(3)).to be == [777, 1001, 100_500]
     end
+
+    it 'must coverage case when while number found, next readed block is a string' do
+      $stdin = StringIO.new('t' * (reader_instance.block_length - 3) + '777' + 'ddd dff ' * 20)
+      expect(reader_instance.capture_data(1000).length).to be == 1
+    end
+
+    it 'must coverage case when next readed block is all number' do
+      length = reader_instance.block_length - 3
+      $stdin = StringIO.new('t' * length + '777' + '333' * length + '3434 sdf werfwe')
+      expect(reader_instance.capture_data(1000).length).to be == 1
+    end
   end
 end

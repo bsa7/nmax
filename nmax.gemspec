@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'nmax-aoirgf'
-  s.version = '0.1.2'
+  s.version = '0.1.3'
   s.executables = ['nmax']
 
   s.authors = ['Sergio Belevskij']
